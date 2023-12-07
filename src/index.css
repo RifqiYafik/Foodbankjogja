@@ -1,0 +1,993 @@
+:root {
+  --primary-text: #505050;
+  --second-text: #6e6d6d;
+  --primary: #f8f8f8;
+  --v2: #feb200;
+  --second-bgc: #f1a661;
+  --main-color: #ffd8a9;
+  --second-color: #fdeedc;
+}
+
+* {
+  font-size: 18px;
+  margin: 0;
+  font-family: "Comix Sans MS", cursive;
+}
+/* Navbar */
+.container-navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.9);
+  z-index: 99;
+}
+
+.container-logo-out {
+  display: flex;
+  float: inline-start;
+  width: 350px;
+}
+
+.container-logo {
+  float: inline-start;
+  width: 370px;
+  border-top: 100px solid #feb200;
+  border-right: 40px solid transparent;
+}
+
+.logo-navbar {
+  margin-left: -290px;
+  float: inline-start;
+  width: 60%;
+}
+
+.navbar-up {
+  height: 50px;
+  width: 100%;
+  background-color: #1b2426;
+  align-items: center;
+}
+
+.container-kontak {
+  margin-right: 110px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.email-icon {
+  margin-right: 0.5rem;
+}
+
+.telpon-icon {
+  margin: 0.5rem;
+  margin-left: 1rem;
+}
+
+.span-for-kontak {
+  color: #f8f8f8;
+}
+
+.navbar-bottom {
+  font-family: "Comic Sans MS", cursive;
+  height: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 110px;
+  gap: 4rem;
+}
+
+.navbar-bottom .nav-link button {
+  padding: 4px 10px 5px 10px;
+  text-decoration: none;
+  color: #6e6d6d;
+  border: none;
+  background-color: var(--primary);
+}
+
+.navbar-bottom .nav-link button:hover {
+  color: var(--v2);
+  background-color: var(--primary);
+  transform: skew(-20deg); /* Kenapa gabisaa euyyy????? */
+}
+
+.navbar-bottom .nav-link .active button {
+  background-color: var(--v2);
+  color: var(--primary);
+  font-style: normal;
+  width: 100px;
+  height: 35px;
+  transform: skew(-20deg); /* Kenapa gabisaa euyyy????? */
+}
+
+/* Hero Section */
+.jumbotron {
+  height: 100vh;
+  background-image: url(assets/herosection.png);
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+}
+
+.content {
+  padding: 250px 0px 0px 540px;
+  letter-spacing: 2px;
+}
+.content p {
+  max-width: 42rem;
+  text-align: justify;
+  /* font-family: Commissioner; */
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+.detail-btn {
+  background-color: #1b2426;
+  color: var(--primary);
+}
+/* Jajar Genjang */
+.DataPenyaluran {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+/* Jajar Genjang */
+.jajar-genjang {
+  width: 336px;
+  height: 150px;
+  transform: skew(-20deg);
+  background-color: var(--primary);
+  /* stroke-width: 2px ;
+  stroke: var(--v2); */
+}
+.jajar-genjang h5 {
+  text-align: center;
+  padding-top: 40px;
+  color: var(--primary-text);
+}
+.jajar-genjang h4 {
+  text-align: center;
+  color: var(--primary-text);
+}
+/* Jajar Genjang End */
+
+/* Pelayanan Section */
+.pelayanan {
+  background-color: var(--v2);
+  min-height: 100vh;
+  margin-top: -80px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.pelayanan .title {
+  padding-top: 150px !important;
+}
+.pelayanan .card {
+  padding: 2rem;
+  align-items: center;
+  height: 23rem;
+  border-radius: 40px;
+  margin-bottom: 100px;
+  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+.pelayanan .card h1 {
+  color: var(--primary-text);
+}
+.pelayanan .card p {
+  text-align: justify;
+  color: var(--primary-text) !important;
+  font-size: 16px;
+}
+/* Button */
+.button-all {
+  padding: 6px 12px;
+  transform: skew(-20deg);
+  border-radius: 8px;
+  background-color: #1b2426;
+  color: #f8f8f8;
+}
+.btn-donasi {
+  padding: 6px 12px;
+  transform: skew(-20deg);
+  border-radius: 8px;
+  background-color: #1b2426;
+  color: #f8f8f8;
+  width: 370px;
+  height: 60px;
+}
+
+.button-next {
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+.button-next .panah-kanan {
+  margin-right: 1.1rem;
+  margin-left: auto;
+}
+
+.button-next .span-button-next {
+  margin-left: -85px;
+  float: inline-start;
+  color: #f8f8f8;
+  z-index: 2;
+}
+
+.button-next-inner {
+  margin: 0;
+  color: #f8f8f8;
+  width: 100px;
+  border-top: 45px solid #1b2426;
+  border-right: 15px solid transparent;
+  z-index: 1;
+}
+
+.container-button-next-inner svg {
+  float: inline-start;
+}
+
+.container-button-next-inner span {
+  float: inline-start;
+  margin-right: -80px;
+  color: #f8f8f8;
+}
+/* Button End*/
+
+/* Testimoni Section*/
+.testimoni img {
+  width: 20%;
+}
+
+.testimoni .swiper {
+  background-color: var(--v2);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 60px 40px;
+}
+
+.testimoni .swiper-slide {
+  text-align: left;
+  font-size: 16px;
+  background: #fff;
+  padding: 20px;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  cursor: grabing;
+}
+.testimoni .swiper-slide:active {
+  cursor: grabbing;
+}
+.testimoni .swiper-slide .desc {
+  color: var(--primary-text);
+  margin-bottom: 100px;
+  text-align: justify;
+  font-size: 16px;
+}
+.testimoni .swiper-slide .people {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  column-gap: 15px;
+  position: fixed;
+  bottom: 0;
+  padding: 20px 20px;
+}
+
+.testimoni .swiper-slide .people h5 {
+  color: var(--primary-text);
+  font-size: 19px;
+}
+
+.testimoni .swiper-slide .people img {
+  width: 60px;
+  border-radius: 100%;
+}
+.testimoni .swiper-slide .people i {
+  color: gold;
+  margin: 1px;
+}
+
+/* Testimoni 2*/
+.testimoni2 img {
+  width: 20%;
+}
+
+.testimoni2 .swiper {
+  background-color: var(--v2);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 40px 40px;
+}
+
+.testimoni2 .swiper-slide {
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  padding: 30px 20px;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  cursor: grabing;
+}
+.testimoni2 .swiper-slide:active {
+  cursor: grabbing;
+}
+
+/* .testimoni2 .swiper-slide .peoplee {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  column-gap: 15px;
+  position: fixed;
+  bottom: 0;
+  padding: 20px 20px;
+} */
+
+.testimoni2 .swiper-slide .peoplee h5 {
+  color: var(--primary-text);
+  font-size: 19px;
+}
+
+.testimoni2 .swiper-slide .peoplee img {
+  width: 60px;
+  border-radius: 100%;
+}
+.testimoni2 .swiper-slide .peoplee i {
+  color: gold;
+  margin: 2px;
+}
+.testimoni2 .swiper-slide .descc {
+  color: var(--primary-text);
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* Komunitas */
+.komunitas {
+  height: 250px;
+  background-color: var(--primary);
+}
+.namakomunitas {
+  display: flex;
+  flex-direction: row;
+  align-content: center !important;
+  justify-content: center;
+  gap: 12rem;
+}
+.komunitas h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 5rem;
+  color: var(--primary-text);
+}
+
+/* Informasi.css */
+.container-bg-informasi .bg-informasi {
+  width: 100%;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+}
+
+.container-bg1-informasi p {
+  margin-right: 10%;
+  margin-left: 5%;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+.container-bg1 {
+  width: 24%;
+  margin-left: 10%;
+}
+.container-bg1-informasi {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.container-bg1-informasi .container-bg1 {
+  margin-right: 5; /* Adjust the margin as needed */
+}
+
+.container-bg2-informasi p {
+  margin-right: 10%;
+  margin-left: 5%;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+.container-bg2 {
+  width: 24%;
+  margin-left: 10%;
+}
+.container-bg2-informasi {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.container-bg2-informasi .container-bg2 {
+  margin-right: 5;
+}
+
+.container-bg1-informasi,
+.container-bg2-informasi {
+  position: relative;
+}
+/* button informasi */
+.ButtonContainer {
+  position: absolute;
+  right: 8%;
+  bottom: 0px;
+}
+
+/*Text dalam background */
+
+.image-with-text {
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  background: white;
+  opacity: 85%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.text-overlay h1 {
+  margin: 0;
+  font-size: 2em;
+}
+.text-overlay p.location-text {
+  font-size: 40px;
+}
+
+/* Donasi */
+/* Donasi */
+/* Donasi */
+.donasi {
+  padding-top: 140px;
+}
+.donasi-title h1 {
+  text-align: center;
+  color: var(--primary-text);
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+
+.donasi-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding: 120px 0px 140px 0px;
+  margin: 30px 45px 100px 45px;
+  background-color: var(--v2);
+  border-radius: 20px;
+}
+.donasi-sub-title h1 {
+  color: var(--primary-text);
+  font-size: 40px;
+}
+
+.btn-donasi-awal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 20px; /* Sesuaikan sesuai kebutuhan */
+  padding: 10px 20px; /* Sesuaikan sesuai kebutuhan */
+  border-radius: 10px;
+  text-align: center;
+  transform: skew (-12deg);
+}
+
+.detail-donasi {
+  padding: 160px 0 120px 0;
+}
+
+.form-detail-donasi {
+  background-color: orange;
+  padding: 40px 35px;
+  border-radius: 30px; /* Menyesuaikan border radius */
+  max-width: 980px;
+  margin: 0 auto;
+  height: 750px;
+}
+
+.container-donasi {
+  text-align: center;
+}
+.container-donasi h1 {
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+/* .form-group label {
+  margin-top: 100px;
+} */
+
+.form-detail-donasi input::placeholder,
+.textarea::placeholder {
+  color: var(--primary-text);
+  opacity: 40%;
+  font-size: 16px;
+}
+input,
+.textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Btn-donasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* .checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.checkbox-label input {
+  margin-right: 8px;
+} */
+
+/* Menyesuaikan tata letak Nomor Telepon dan Deksripsi */
+#phoneNumber,
+#description {
+  grid-column: span 2; /* Membuat Nomor Telepon dan Deksripsi mengambil dua kolom */
+}
+
+/* Status Donasi */
+.status-pembayaran {
+  /* background-color: #ffd8a9; */
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.greetings {
+  margin-top: 5rem;
+}
+
+.greetings i {
+  font-size: 4.5rem;
+}
+
+.greetings h1 {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.greetings p:nth-child(3) {
+  color: #4caf50;
+  font-size: 2rem;
+}
+
+.greetings p:nth-child(4) {
+  color: #4caf50;
+  font-size: 2rem;
+  margin-top: -2rem;
+}
+
+.greetings a:nth-child(5) {
+  background-color: #e38b29;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.greetings a:nth-child(5):hover {
+  background-color: #e89d46;
+}
+
+/* Relawan */
+/* Relawan */
+/* Relawan */
+.container-bg-relawan {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+/* 
+.container-bg-relawan img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 45px;
+} */
+
+/* Text pada bg relawan */
+
+.text-overlay-relawan {
+  width: 40%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: white;
+  opacity: 85%;
+  padding: 10px;
+  border-radius: 8px;
+}
+.text-overlay-relawan .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.text-overlay-relawan h1 {
+  font-size: 40px;
+  margin-bottom: 5px; /* Mengurangi margin untuk h1 */
+  text-align: justify;
+}
+
+.text-overlay-relawan h2 {
+  font-size: 35px;
+  margin-bottom: 5px; /* Menyesuaikan margin untuk h2 agar sejajar dengan h1 */
+  text-align: left;
+}
+
+.text-overlay-relawan p {
+  width: 550px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.btn-relawan {
+  display: flex;
+  align-items: center;
+  opacity: 100%;
+}
+/* Text Relawan atau card yang di bawah bg*/
+
+.container-relawan-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-overlay-relawan1 {
+  background-color: rgb(247, 245, 245);
+  padding: 20px;
+  width: 450px;
+  height: 500px;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  margin-left: 60px;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3),
+    0px -5px 30px rgba(255, 255, 255, 0.5);
+  border-radius: 60px;
+}
+.text-overlay-relawan2 {
+  background-color: rgb(247, 245, 245);
+  padding: 20px;
+  width: 450px;
+  height: 500px;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  margin-left: 0;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3),
+    0px -7px 30px rgba(255, 255, 255, 0.5);
+  border-radius: 60px;
+}
+.text-overlay-relawan3 {
+  background-color: rgb(247, 245, 245);
+  padding: 20px;
+  width: 450px;
+  height: 500px;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  margin-right: 60px;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3),
+    0px -5px 30px rgba(255, 255, 255, 0.5);
+  border-radius: 60px;
+}
+
+.text-overlay-relawan1 h1 {
+  width: 400px;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.text-overlay-relawan1 p {
+  max-width: 320px;
+  font-size: 17px;
+  margin-top: 40px;
+  margin-left: 45px;
+  text-align: justify;
+  color: #6e6d6d;
+}
+.text-overlay-relawan2 h1 {
+  width: 400px;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.text-overlay-relawan2 p {
+  max-width: 320px;
+  font-size: 17px;
+  margin-top: 40px;
+  margin-left: 45px;
+  text-align: justify;
+  color: #6e6d6d;
+}
+
+.text-overlay-relawan3 h1 {
+  width: 400px;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.text-overlay-relawan3 p {
+  max-width: 320px;
+  font-size: 17px;
+  margin-top: 40px;
+  margin-left: 45px;
+  text-align: justify;
+  color: #6e6d6d;
+}
+
+.ButtonContainer-relawanbg {
+  margin-top: 35px;
+  margin-right: 45px;
+  text-align: right;
+}
+
+.ButtonContainer-relawanbg2 {
+  margin-top: 63px;
+  margin-right: 45px;
+  text-align: right;
+}
+
+.ButtonContainer-relawanbg3 {
+  margin-top: 63px;
+  margin-right: 45px;
+  text-align: right;
+}
+/* Relawan Detail  */
+/* Relawan Detail  */
+/* Relawan Detail  */
+.relawandetail {
+  background-color: var(--v2);
+}
+.bgrelawandetail {
+  padding-top: 100px;
+}
+.text-detail-relawan p {
+  font-size: 25px;
+  margin: 50px 120px;
+  text-align: justify;
+  color: var(--primary-text);
+}
+.form-detail-relawan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.form-detail-relawan h2 {
+  color: var(--primary-text);
+}
+.orange-label {
+  width: 600px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  background-color: var(--v2);
+  color: orange limportant;
+  padding: 10px;
+}
+.orange-label2 {
+  width: 600px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--v2);
+  padding: 10px;
+}
+.orange-label3 {
+  width: 600px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--v2);
+  padding: 10px;
+}
+.formclr {
+  background-color: var(--v2);
+}
+.ButtonContainer-relawan-detail {
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+/* Kontak */
+/* Kontak */
+/* Kontak */
+.form-kontak {
+  background-color: orange;
+  padding: 40px 30px;
+  border-radius: 30px; /* Menyesuaikan border radius */
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  height: 580px;
+}
+.text-kontak {
+  text-align: center;
+}
+.text-kontak h1 {
+  font-size: 30px;
+}
+.text-kontak h2 {
+  font-size: 30px;
+  margin: 50px auto 40px auto;
+}
+.Btn-kontak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+/* Footer */
+/* Footer */
+/* Footer */
+
+.footer-top {
+  background-color: #1b2426;
+  color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+}
+
+.container-text-top {
+  width: 92%;
+  display: flex;
+}
+
+.container-logo-footer-top {
+  display: flex;
+  justify-content: center;
+}
+
+/* .container-link-kilat {
+  display: flex;
+  justify-content: center;
+} */
+
+.container-text1-footer-top {
+  text-align: justify;
+  color: #f8f8f8;
+}
+
+.logo-footer {
+  height: 72px;
+  margin-bottom: 1rem;
+  float: inherit;
+}
+
+.container-link-kilat-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+}
+
+.container-link-kilat-top p {
+  font-size: xx-large;
+  color: #feb200;
+}
+
+.container-link-kilat-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.container-link-kilat-bottom p {
+  margin-left: 10px;
+  color: #f8f8f8;
+  padding-top: 15px;
+}
+
+.container-alamat-top {
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-alamat-top p {
+  font-size: xx-large;
+  color: #feb200;
+}
+
+.container-alamat-bottom p {
+  margin-left: 15px;
+  padding-top: 15px;
+}
+
+.container-alamat-bottom ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.container-link-sosmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.container-logo-footer,
+.container-link-kilat,
+.container-alamat,
+.container-link-sosmed {
+  width: 23%;
+  margin: 1rem 0.4rem;
+}
+
+.footer-bottom {
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  display: flex;
+  height: 40px;
+  background-color: #feb200;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Footer End */
