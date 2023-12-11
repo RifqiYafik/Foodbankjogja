@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-text: #505050;
   --second-text: #6e6d6d;
@@ -74,7 +78,7 @@
   height: 50px;
   font-weight: bold;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   margin-right: 110px;
   gap: 4rem;
@@ -448,24 +452,24 @@
   width: 100%;
 }
 
-.text-overlay {
+.text-overlay-informasi {
   position: absolute;
-  top: 88%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: black;
   background: white;
   opacity: 85%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 8px;
 }
 
-.text-overlay h1 {
+.text-overlay-informasi h1 {
   margin: 0;
   font-size: 2em;
 }
-.text-overlay p.location-text {
+.text-overlay-informasi p.location-text {
   font-size: 40px;
 }
 

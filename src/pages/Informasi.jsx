@@ -2,10 +2,13 @@ import React from "react";
 import Button from "../Components/Button";
 import { Image } from "react-bootstrap";
 import "../index.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Informasi = () => {
   return (
     <>
+      <Navbar />
       <div className="container-bg-informasi">
         <Image
           src="../src/assets/informasibg.png"
@@ -24,7 +27,7 @@ const Informasi = () => {
           style={{ display: "flex", flexDirection: "column", height: "40vh" }}
         >
           <h1 className="pt-3 pb-1" style={{ marginLeft: "50px" }}>
-            Bps D.I.Y
+            Badan Pusat Statistik Yogyakarta
           </h1>
           <p>
             Persentase Penduduk Miskin Maret 2023 turun menjadi 11,04 persen.
@@ -36,7 +39,7 @@ const Informasi = () => {
             miskin perkotaan pada Maret 2023 sebesar 10,27 persen dan turun 0,37
             persen poin dibandingkan September 2022. Penduduk miskin perdesaan
             pada Maret 2023 sebesar 13,36 persen dan turun 0,64 persen poin
-            dibandingkan September 2022. Jumlah penduduk miskin di perkotaan
+            dibandingkan September 2022. Jumlah penduduk miskin di perkotaan
             pada Maret 2023 sebanyak 312,83 ribu orang, turun sebanyak 8,2 ribu
             orang dibandingkan September 2022. Sementara itu, jumlah penduduk
             miskin perdesaan pada Maret 2023 sebanyak 135,63 ribu orang atau
@@ -81,6 +84,7 @@ const Informasi = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -2,10 +2,13 @@ import React from "react";
 import Button from "../Components/Button";
 import { Image } from "react-bootstrap";
 import "../index.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Relawan = () => {
   return (
     <>
+      <Navbar />
       <div className="container-bg-relawan pt-5">
         <Image
           src="../src/assets/bgrelawan.png"
@@ -86,6 +89,7 @@ const Relawan = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

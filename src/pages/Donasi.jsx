@@ -2,10 +2,13 @@ import React from "react";
 import ButtonDonasi from "../Components/ButtonDonasi";
 import { Container, Row, Col } from "react-bootstrap";
 import "../index.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Donasi = () => {
   return (
     <>
+      <Navbar />
       <Container className="donasi">
         <form className="donasi-content">
           {/* <Row>
@@ -85,6 +88,7 @@ const Donasi = () => {
           </Row>
         </form>
       </Container>
+      <Footer />
     </>
   );
 };

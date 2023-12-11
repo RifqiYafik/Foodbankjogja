@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
 
 const DonasiStatus = () => {
   return (
     <>
+      <Navbar />
       <div class="container">
         {/*  Status */}
         <div class="status-pembayaran">
@@ -34,6 +36,7 @@ const DonasiStatus = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

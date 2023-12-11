@@ -63,7 +63,7 @@ const Navbar = ({ Roti }) => {
           <span>Relawan</span>
           <span>Donasi</span>
           <span>Kontak</span> */}
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="39"
@@ -83,7 +83,7 @@ const Navbar = ({ Roti }) => {
               stroke="#FEB200"
               stroke-width="2"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
     </>

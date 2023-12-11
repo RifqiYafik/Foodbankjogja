@@ -9,27 +9,27 @@ import People3 from "../assets/img/people-3.jpg";
 export const navLinks = [
   {
     id: 1,
-    path: "",
+    path: "/",
     text: "Beranda",
   },
   {
     id: 2,
-    path: "informasi",
+    path: "/informasi",
     text: "Informasi",
   },
   {
     id: 3,
-    path: "donasi",
+    path: "/donasi",
     text: "Donasi",
   },
   {
     id: 4,
-    path: "relawan",
+    path: "/relawan",
     text: "Relawan",
   },
   {
     id: 5,
-    path: "kontak",
+    path: "/kontak",
     text: "Kontak",
   },
 ];

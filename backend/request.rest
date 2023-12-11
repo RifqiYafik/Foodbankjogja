@@ -1,0 +1,29 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/1
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Rifqi", 
+    "email": "rifqi@gmail.com", 
+    "telepon": "08090809",
+    "gender": "laki-laki"
+}
+
+###
+PATCH http://localhost:5000/users/8
+Content-Type: application/json
+
+{
+    "name": "Jaduu", 
+    "email": "john@gmail.com", 
+    "telepon": "0808808",
+    "gender": "Perempuan"
+}
+
+###
+DELETE http://localhost:5000/users/8

@@ -11,10 +11,13 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       {/* Hero Section */}
       <section>
         <div className="jumbotron ">
@@ -228,6 +231,7 @@ const Home = () => {
           </Container>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

@@ -2,10 +2,13 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import Button from "../Components/Button";
 import Form from "react-bootstrap/Form";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const RelawanDetail = () => {
   return (
     <>
+      <Navbar />
       <div className="relawandetail">
         <div className="bgrelawandetail">
           <Image
@@ -55,6 +58,7 @@ const RelawanDetail = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
