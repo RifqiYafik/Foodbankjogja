@@ -111,7 +111,7 @@ No. 20, Jalan Amarta, Pringgolayan, Dabag, Condongcatur, Depok, Sleman, DI Yogya
                   required
                 />
               </Form.Group>
-            </Col>
+            </Col>  
           </Row>
 
           <div className="Btn-donasi">

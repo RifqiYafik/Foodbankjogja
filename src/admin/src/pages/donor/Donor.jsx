@@ -4,7 +4,7 @@ import Navbar from "../../components/header/Navbar";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
-import Filter from "../../assets/filter.svg";
+import Filter from "../../assetss/filter.svg";
 
 export default function Donor() {
   return (

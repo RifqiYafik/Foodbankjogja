@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link as Link1, useLocation, useNavigate } from "react-router-dom";
 
-import headerLogo from "../../assets/footer-logo.svg";
-import searchIcon from "../../assets/search-icon.svg";
-import Profil from "../../assets/profil.svg";
-import Logout from "../../assets/logout.svg";
-import Phone from "../../assets/phone.svg";
-import Mail from "../../assets/mail.svg";
+import headerLogo from "../../assetss/footer-logo.svg";
+import searchIcon from "../../assetss/search-icon.svg";
+import Profil from "../../assetss/profil.svg";
+import Logout from "../../assetss/logout.svg";
+import Phone from "../../assetss/phone.svg";
+import Mail from "../../assetss/mail.svg";
 
 export default function Navbar() {
   const location = useLocation();
@@ -36,26 +36,26 @@ export default function Navbar() {
           <img src={headerLogo} alt="" width="200px" />
         </div>
         <div className="flex items-center space-x-6 text-base font-semibold">
-          <Link
+          <Link1
             to="/home"
             className={url === "/home" ? "bg-[#FEB200] p-2 rounded-sm" : ""}
           >
             Home
-          </Link>
-          <Link
+          </Link1>
+          <Link1
             to="/volunteer"
             className={
               url === "/volunteer" ? "bg-[#FEB200] p-2 rounded-sm" : ""
             }
           >
             Relawan
-          </Link>
-          <Link
+          </Link1>
+          <Link1
             to="/donor"
             className={url === "/donor" ? "bg-[#FEB200] p-2 rounded-sm" : ""}
           >
             Donasi
-          </Link>
+          </Link1>
           <button>
             <img src={searchIcon} alt="" />
           </button>
