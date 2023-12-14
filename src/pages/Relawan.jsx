@@ -9,12 +9,11 @@ const Relawan = () => {
   return (
     <>
       <Navbar />
-      <div className="container-bg-relawan pt-5">
+      <div className="container-bg-relawan">
         <Image
           src="../src/assets/bgrelawan.png"
-          fluid
           alt="background"
-          className="img-fluid"
+          className="bg-relawan"
         />
         <div className="text-overlay-relawan">
           <div className="content">
