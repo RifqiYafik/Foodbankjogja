@@ -8,8 +8,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Rifqi", 
-    "email": "rifqi@gmail.com", 
+    "name": "elvin", 
+    "email": "elvin@gmail.com", 
     "telepon": "08090809",
     "gender": "laki-laki"
 }

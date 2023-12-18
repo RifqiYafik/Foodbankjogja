@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "./Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import axios from "axios";
 
 function FormulirDana() {
   const [formData, setFormData] = useState({
@@ -13,25 +13,13 @@ function FormulirDana() {
     lastName: "",
     email: "",
     phoneNumber: "",
-    address: "",
     amount: "",
+    address: "",
     description: "",
     anonymous: false,
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Lakukan sesuatu dengan data FormulirDana, misalnya mengirimnya ke server
-    console.log(formData);
-  };
+  const [token, setToken] = useState("");
 
   // Pembayaran donasi (anonim)
   function anonima() {
@@ -41,12 +29,102 @@ function FormulirDana() {
       let inputs = document.getElementsByClassName("form-control");
 
       for (let i = 0; i < 3; i++) {
-        inputs[i].disabled = checkbox.checked;
+        // inputs[i].disabled = checkbox.checked;
+        if (checkbox.checked) {
+          // Jika dicentang, atur nilai dan status disabled
+          inputs[i].disabled = true;
+          if (i === 0) {
+            setFormData((prevData) => ({ ...prevData, firstName: "Hamba" }));
+          } else if (i === 1) {
+            setFormData((prevData) => ({ ...prevData, lastName: "Allah" }));
+          } else if (i === 2) {
+            const randomSuffix = Math.floor(Math.random() * 2000);
+            setFormData((prevData) => ({
+              ...prevData,
+              email: `Someone${randomSuffix}@gmail.com`,
+            }));
+          }
+        } else {
+          // Jika tidak dicentang, atur kembali ke nilai dan status semula
+          inputs[i].disabled = false;
+          setFormData((prevData) => ({
+            ...prevData,
+            firstName: "",
+            lastName: "",
+            email: "",
+          }));
+        }
       }
     } else {
       console.error("nothing");
     }
   }
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    //
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Lakukan sesuatu dengan data FormulirDana, misalnya mengirimnya ke server
+    // console.log(formData);
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const response = await axios.post(
+      "http://localhost:2023/backend/payment/process-transaction",
+      formData,
+      config
+    );
+    setToken(response.data.token);
+  };
+
+  useEffect(() => {
+    if (token) {
+      window.snap.pay(token, {
+        onSuccess: (result) => {
+          localStorage.setItem("Pembayaran", JSON.stringify(result));
+          setToken("");
+        },
+        onPending: (result) => {
+          localStorage.setItem("Pembayaran", JSON.stringify(result));
+          setToken("");
+        },
+        onError: (error) => {
+          console.log(error);
+          setToken("");
+        },
+        onClose: () => {
+          console.log("Anda belum menyelesaikan pembayaran");
+          setToken("");
+        },
+      });
+      setFormData("");
+    }
+  }, [token]);
+
+  useEffect(() => {
+    const midtransUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
+
+    let scriptTag = document.createElement("script");
+    scriptTag.src = midtransUrl;
+
+    const midtransClientkey = "SB-Mid-client-Auje5CNwO6-1gcFQ";
+    scriptTag.setAttribute("data-client-key", midtransClientkey);
+
+    document.body.appendChild(scriptTag);
+
+    return () => {
+      document.body.removeChild(scriptTag);
+    };
+  }, []);
 
   return (
     <>
@@ -112,7 +190,7 @@ function FormulirDana() {
                 <Form.Control
                   type="number"
                   name="amount"
-                  placeholder="contoh: 1000000"
+                  placeholder="contoh: 10000"
                   value={formData.amount}
                   onChange={handleChange}
                   required
@@ -127,7 +205,7 @@ function FormulirDana() {
                   Nomor Telepon/Wa <sup style={{ color: "#ff0000" }}>*</sup>
                 </Form.Label>
                 <Form.Control
-                  type="tel"
+                  type="number"
                   name="phoneNumber"
                   placeholder="contoh: 085200112234"
                   value={formData.phoneNumber}
@@ -160,7 +238,7 @@ function FormulirDana() {
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
-                  required
+                  // required
                 />
               </Form.Group>
             </Col>
@@ -183,7 +261,7 @@ function FormulirDana() {
           </Form.Group>
 
           <div className="Btn-donasi">
-            <Button TextButton="Submit" />
+            <button className="button-all">Submit</button>
           </div>
         </Form>
       </Container>

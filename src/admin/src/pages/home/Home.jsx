@@ -1,13 +1,13 @@
 import React from "react";
 
-import Navbar from "../../components/header/Navbar";
-import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../../../Components/Footer";
 
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
-      <div className="flex justify-between px-48 py-6">
+      <Navbar />
+      <div className="flex justify-between px-48 py-60">
         <div className="bg-[#F8F8F8] rounded-lg w-2/5">
           <h1 className="text-center font-bold pt-8 text-[24px]">
             Jumlah Relawan
@@ -63,7 +63,10 @@ export default function Home() {
               <div class="relative flex flex-col items-center flex-grow pb-5 group">
                 <div class="flex flex-col">
                   <div class="w-48 h-24 rounded-tl-full rounded-tr-full border-2 border-[#FEB200]"></div>
-                  <span className="absolute top-14 left-40 font-bold text-[48px]">
+                  <span
+                    className="absolute  font-bold text-[48px]"
+                    style={{ marginLeft: "60px", marginTop: "70px" }}
+                  >
                     50%
                   </span>
                   <div class="w-48 h-24 rounded-bl-full rounded-br-full bg-[#FEB200]"></div>

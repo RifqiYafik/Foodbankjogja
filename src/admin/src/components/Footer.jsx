@@ -1,12 +1,12 @@
 import React from "react";
 
-import footerLogo from "../../assetss/footer-logo.svg";
-import iconTelegram from "../../assetss/telegram.svg";
-import iconInstagram from "../../assetss/instagram.svg";
-import iconTwitter from "../../assetss/twitter.svg";
-import Map from "../../assetss/map.svg";
-import Phone from "../../assetss/phone.svg";
-import Mail from "../../assetss/mail.svg";
+import footerLogo from "../assetss/footer-logo.svg";
+import iconTelegram from "../assetss/telegram.svg";
+import iconInstagram from "../assetss/instagram.svg";
+import iconTwitter from "../assetss/twitter.svg";
+import Map from "../assetss/map.svg";
+import Phone from "../assetss/phone.svg";
+import Mail from "../assetss/mail.svg";
 
 export default function Footer() {
   return (

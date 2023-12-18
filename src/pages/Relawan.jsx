@@ -43,13 +43,13 @@ const Relawan = () => {
             memperluas jaringan sosial. Bergabunglah untuk merasakan manfaat
             positif dan berkontribusi pada perubahan besar dalam komunitas.
           </p>
-          <div className="ButtonContainer-relawanbg">
+          {/* <div className="ButtonContainer-relawanbg">
             <Button
               TextButton="Detail"
               onClick={() => console.log("Tombol diklik")}
               link="/relawan/relawan-detail"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="text-overlay-relawan2">
@@ -61,13 +61,13 @@ const Relawan = () => {
             pribadi Anda. Bergabunglah dengan percaya diri, karena keamanan Anda
             selalu menjadi fokus utama kami.
           </p>
-          <div className="ButtonContainer-relawanbg2">
+          {/* <div className="ButtonContainer-relawanbg2">
             <Button
               TextButton="Detail"
               onClick={() => console.log("Tombol diklik")}
               link="/relawan/relawan-detail"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="text-overlay-relawan3">
@@ -79,13 +79,13 @@ const Relawan = () => {
             kepuasan memberikan bantuan tanpa beban, sambil memperkaya
             keterampilan dan kepuasan pribadi Anda.
           </p>
-          <div className="ButtonContainer-relawanbg3">
+          {/* <div className="ButtonContainer-relawanbg3">
             <Button
               TextButton="Detail"
               onClick={() => console.log("Tombol diklik")}
               link="/relawan/relawan-detail"
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "./Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import axios from "axios";
 
 function FormulirPangan() {
   const [formData, setFormData] = useState({
@@ -14,23 +14,38 @@ function FormulirPangan() {
     email: "",
     phoneNumber: "",
     address: "",
-    amount: "",
+    descriptionMakanan: "",
+    descriptionJumlah: "",
     description: "",
     anonymous: false,
   });
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
+    // setFormData({
+    //   ...formData,
+    //   [name]: type === "checkbox" ? checked : value,
+    // });
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: type === "checkbox" ? checked : value,
-    });
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Lakukan sesuatu dengan data FormulirPangan, misalnya mengirimnya ke server
     console.log(formData);
+    // Kirim pesan ke WhatsApp menggunakan Twilio
+    try {
+      const response = await axios.post(
+        "http://localhost:2023/backend/send-whatsapp",
+        formData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error sending WhatsApp message:", error);
+    }
   };
 
   // Pembayaran donasi (anonim)
@@ -41,7 +56,31 @@ function FormulirPangan() {
       let inputs = document.getElementsByClassName("form-control");
 
       for (let i = 0; i < 3; i++) {
-        inputs[i].disabled = checkbox.checked;
+        // inputs[i].disabled = checkbox.checked;
+        if (checkbox.checked) {
+          // Jika dicentang, atur nilai dan status disabled
+          inputs[i].disabled = true;
+          if (i === 0) {
+            setFormData((prevData) => ({ ...prevData, firstName: "Hamba" }));
+          } else if (i === 1) {
+            setFormData((prevData) => ({ ...prevData, lastName: "Allah" }));
+          } else if (i === 2) {
+            const randomSuffix = Math.floor(Math.random() * 1000);
+            setFormData((prevData) => ({
+              ...prevData,
+              email: `Someone${randomSuffix}@gmail.com`,
+            }));
+          }
+        } else {
+          // Jika tidak dicentang, atur kembali ke nilai dan status semula
+          inputs[i].disabled = false;
+          setFormData((prevData) => ({
+            ...prevData,
+            firstName: "",
+            lastName: "",
+            email: "",
+          }));
+        }
       }
     } else {
       console.error("nothing");
@@ -105,15 +144,15 @@ function FormulirPangan() {
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group controlId="amount">
+              <Form.Group controlId="description">
                 <Form.Label className="pt-2" style={{ color: "#505050" }}>
                   Jenis Makanan <sup style={{ color: "#ff0000" }}>*</sup>
                 </Form.Label>
                 <Form.Control
-                  type="number"
-                  name="amount"
+                  type="text"
+                  name="descriptionMakanan"
                   placeholder="contoh: Sayur, beras, makanan sisa"
-                  value={formData.amount}
+                  value={formData.descriptionMakanan}
                   onChange={handleChange}
                   required
                 />
@@ -127,7 +166,7 @@ function FormulirPangan() {
                   Nomor Telepon/Wa <sup style={{ color: "#ff0000" }}>*</sup>
                 </Form.Label>
                 <Form.Control
-                  type="tel"
+                  type="number"
                   name="phoneNumber"
                   placeholder="contoh: 085200112234"
                   value={formData.phoneNumber}
@@ -149,15 +188,15 @@ function FormulirPangan() {
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group controlId="amount">
+              <Form.Group controlId="description">
                 <Form.Label className="pt-2" style={{ color: "#505050" }}>
                   Jumlah Makanan <sup style={{ color: "#ff0000" }}>*</sup>
                 </Form.Label>
                 <Form.Control
-                  type="number"
-                  name="amount"
+                  type="text"
+                  name="descriptionJumlah"
                   placeholder="contoh: 1 bungkus, 1 kilogram, 1 porsi"
-                  value={formData.amount}
+                  value={formData.descriptionJumlah}
                   onChange={handleChange}
                   required
                 />
@@ -196,7 +235,7 @@ function FormulirPangan() {
           </Form.Group>
 
           <div className="Btn-donasi">
-            <Button TextButton="Submit" />
+            <button className="button-all">Submit</button>
           </div>
         </Form>
       </Container>

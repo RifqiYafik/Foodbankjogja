@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { Image } from "react-bootstrap";
 import Button from "../Components/Button";
 import Form from "react-bootstrap/Form";
@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 const RelawanDetail = () => {
+  const [gender, setGender] = useState("");
   return (
     <>
       <Navbar />
@@ -45,10 +46,23 @@ const RelawanDetail = () => {
                 />
               </Form.Group>
             </div>
-
             <div>
               <Form.Group controlId="formTelepon" className="orange-label3">
                 <Form.Control type="text" placeholder="Telepon " />
+              </Form.Group>
+            </div>
+
+            <div>
+              <Form.Group controlId="formGender" className="orange-label4">
+                <Form.Control
+                  as="select"
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                >
+                  <option value="">Pilih Jenis Kelamin</option>
+                  <option value="male">Laki-laki</option>
+                  <option value="female">Perempuan</option>
+                </Form.Control>
               </Form.Group>
             </div>
 

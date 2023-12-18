@@ -190,7 +190,11 @@ const Home = () => {
                     return (
                       <SwiperSlide key={testi.id} className="shadow rounded-5">
                         <div className="peoplee">
-                          <img src={testi.image} alt="image" className="" />
+                          <img
+                            className="imgtesti"
+                            src={testi.image}
+                            alt="image"
+                          />
                           <div>
                             <h5 className="my-1">{testi.name}</h5>
                             <i className={testi.star1}></i>

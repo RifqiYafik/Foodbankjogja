@@ -56,8 +56,8 @@
   margin-right: 110px;
   height: 100%;
   display: flex;
-  justify-content: end;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .email-icon {
@@ -106,7 +106,10 @@
   height: 35px;
   transform: skew(-20deg); /* Kenapa gabisaa euyyy????? */
 }
-
+.profile {
+  position: absolute;
+  margin-left: 72rem;
+}
 /* Hero Section */
 .jumbotron {
   height: 100vh;
@@ -358,6 +361,10 @@
 .testimoni2 .swiper-slide .peoplee i {
   color: gold;
   margin: 2px;
+}
+
+.testimoni2 .swiper-slide .peoplee .imgtesti {
+  margin-left: 30px;
 }
 .testimoni2 .swiper-slide .descc {
   color: var(--primary-text);
@@ -629,13 +636,14 @@ input,
   width: 100%;
   overflow: hidden;
 }
-/* 
-.container-bg-relawan img {
+
+.container-bg-relawan .bg-relawan {
   width: 100%;
-  height: auto;
-  display: block;
-  padding-top: 45px;
-} */
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+}
 
 /* Text pada bg relawan */
 
@@ -840,6 +848,13 @@ input,
   background-color: var(--v2);
   padding: 10px;
 }
+.orange-label4 {
+  width: 600px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--v2);
+  padding: 10px;
+}
 .formclr {
   background-color: var(--v2);
 }
@@ -995,3 +1010,89 @@ li {
 }
 
 /* Footer End */
+
+/* Admin */
+/* Admin */
+/* Admin */
+/* Admin */
+/* Admin */
+/* css untuk relawan admin*/
+
+.container-bg-admin .bg-admin {
+  width: 100%;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+}
+.text-overlay-admin {
+  width: 40%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: white;
+  opacity: 85%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.text-overlay-admin .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.text-overlay-admin h1 {
+  font-size: 40px;
+  margin-bottom: 5px; /* Mengurangi margin untuk h1 */
+
+  text-align: justify;
+}
+
+.text-overlay-admin p {
+  width: 550px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+/*css untuk tabel admin */
+.table-admin {
+  padding: 2% 6% 2% 5%;
+}
+.table-admin h2 {
+  text-align: center;
+}
+
+.table {
+  margin-top: 200px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 2px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.button-relawan-admin1 {
+  margin-top: 35px;
+  margin-left: 86%;
+}
+
+.table-admin .button-admin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

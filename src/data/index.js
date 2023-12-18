@@ -34,6 +34,24 @@ export const navLinks = [
   },
 ];
 
+export const navLinksAdmin = [
+  {
+    id: 1,
+    path: "/home",
+    text: "Home",
+  },
+  {
+    id: 2,
+    path: "/volunteer",
+    text: "Relawan",
+  },
+  {
+    id: 3,
+    path: "/donor",
+    text: "Donasi",
+  },
+];
+
 export const dataPenyaluran = [
   {
     id: 1,
